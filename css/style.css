@@ -1,0 +1,140 @@
+:root {
+  --bg-main: #0b0f14;
+  --bg-panel: #111827;
+  --bg-message-user: #1f2937;
+  --bg-message-admin: #2563eb;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #3b82f6;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  height: 100vh;
+}
+
+header {
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: var(--bg-panel);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 14px;
+  max-width: 75%;
+}
+
+.message.user {
+  align-self: flex-start;
+}
+
+.message.admin {
+  align-self: flex-end;
+}
+
+.bubble {
+  padding: 12px 14px;
+  border-radius: 12px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user .bubble {
+  background: var(--bg-message-user);
+}
+
+.admin .bubble {
+  background: var(--bg-message-admin);
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.input-box {
+  display: flex;
+  border-top: 1px solid var(--border);
+}
+
+input {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+button {
+  padding: 0 20px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ADMIN */
+.admin-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 260px;
+  background: #0b1220;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.user-item {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.user-item:hover {
+  background: #111827;
+}
+
+.user-item.active {
+  background: var(--accent);
+  color: white;
+}
