@@ -30,11 +30,13 @@ window.send = () => {
   }
 
   push(messagesRef, {
-    from: "client",
-    text,
-    time: Date.now()
-  });
+  from: "user",
+  name: "Пользователь #" + userId,
+  text,
+  time: Date.now()
+});
 
   input.value = "";
 };
+
 
