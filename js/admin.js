@@ -37,9 +37,11 @@ function openChat(id) {
 window.send = () => {
   if (!currentChat) return;
   push(currentChat, {
-    from: "admin",
-    text: input.value,
-    time: Date.now()
-  });
+  from: "admin",
+  name: "Поддержка",
+  text: input.value,
+  time: Date.now()
+});
   input.value = "";
 };
+
