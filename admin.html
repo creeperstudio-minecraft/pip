@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BikEService — Админ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>BikEService • Админ-панель</header>
+
+<div class="chat-container admin-layout">
+  <div class="sidebar" id="users"></div>
+
+  <div class="chat-main">
+    <div id="messages" class="messages"></div>
+
+    <div class="input-box">
+      <input id="input" placeholder="Ответ поддержки..." />
+      <button onclick="send()">Ответить</button>
+      <button onclick="closeChat()">Закрыть</button>
+      <button onclick="ban()">Бан</button>
+    </div>
+  </div>
+</div>
+
+<audio id="notifySound" src="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"></audio>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
