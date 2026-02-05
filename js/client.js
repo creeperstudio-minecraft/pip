@@ -1,8 +1,8 @@
 import { db } from "./firebase.js";
 import { ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-const chatId = localStorage.chatId || crypto.randomUUID();
-localStorage.chatId = chatId;
+const userId = localStorage.userId || Math.floor(1000 + Math.random() * 9000);
+localStorage.userId = userId;
 
 const messagesRef = ref(db, "chats/" + chatId);
 
@@ -37,3 +37,4 @@ window.send = () => {
 
   input.value = "";
 };
+
